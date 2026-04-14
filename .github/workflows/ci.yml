@@ -118,7 +118,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Trivy filesystem scan (requirements.txt)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           scan-type: fs
           scan-ref: app/
@@ -128,7 +128,7 @@ jobs:
           ignore-unfixed: false
 
       - name: Trivy filesystem scan (export SARIF pour onglet Security)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           scan-type: fs
           scan-ref: app/
@@ -165,7 +165,7 @@ jobs:
         run: docker load -i /tmp/image.tar
 
       - name: Trivy image scan (table dans les logs)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           severity: HIGH,CRITICAL
@@ -174,7 +174,7 @@ jobs:
           ignore-unfixed: false
 
       - name: Trivy image scan (export SARIF)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           severity: HIGH,CRITICAL
