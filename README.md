@@ -43,12 +43,6 @@ Il enchaîne 6 jobs :
 Les rapports Trivy au format SARIF sont publiés dans l'onglet **Security** du
 dépôt GitHub.
 
-## 🚀 Comment exécuter le pipeline
-
-1. Forker / cloner ce dépôt sur ton compte GitHub.
-2. Activer les Actions dans l'onglet `Actions`.
-3. Pousser un commit ou utiliser le bouton **Run workflow** (workflow_dispatch).
-4. Consulter les logs et l'onglet Security pour les CVE.
 
 ## 📝 Vulnérabilités intentionnelles
 
