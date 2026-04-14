@@ -63,7 +63,8 @@ jobs:
         run: pip install yamllint
 
       - name: Execution de yamllint sur le dossier k8s
-        run: yamllint -d "{extends: default, rules: {line-length: {max: 160}}}" k8s/
+        run: |
+          yamllint -d "{extends: default, rules: {line-length: {max: 160}}}" k8s/
 
       - name: Verification avec kube-linter
         uses: stackrox/kube-linter-action@v1.0.4
